@@ -1,4 +1,6 @@
 import "@styles/globals.css";
+import blueYellow from "@public/blueyellow.jpg";
+import Image from "next/image";
 
 export const metadata = {
   title: "IdeaBin",
@@ -8,11 +10,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="">
         <div className="main">
-          <div className="gradient" />
+          <div className="background">
+            <Image
+              src={blueYellow}
+              alt="Blue and Yellow Background"
+              placeholder="blur"
+              quality={100}
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+                zIndex: -1,
+              }}
+            />
+            <main className="app">{children}</main>
+          </div>
         </div>
-        <main className="app">{children}</main>
       </body>
     </html>
   );
