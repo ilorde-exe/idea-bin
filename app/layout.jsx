@@ -1,6 +1,7 @@
 import "@styles/globals.css";
 import blueYellow from "@public/blueyellow.jpg";
 import Image from "next/image";
+import Nav from "@components/Nav";
 
 export const metadata = {
   title: "IdeaBin",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="">
         <div className="main">
+          <Nav />
           <div className="background">
             <Image
               src={blueYellow}
