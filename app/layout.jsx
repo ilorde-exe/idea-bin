@@ -2,6 +2,7 @@ import "@styles/globals.css";
 import blueYellow from "@public/blueyellow.jpg";
 import Image from "next/image";
 import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 
 export const metadata = {
   title: "IdeaBin",
@@ -12,8 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <div className="main">
-          <Nav />
+        <div className="">
           <div className="background">
             <Image
               src={blueYellow}
@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
                 zIndex: -1,
               }}
             />
-            <main className="app">{children}</main>
+            <main className="app">
+              <Nav/>
+              {children}</main>
           </div>
         </div>
       </body>

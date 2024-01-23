@@ -1,3 +1,4 @@
+import Feed from "@components/Feed";
 export default function Home() {
   return (
     <section className="w-full flex-center flex-col">
@@ -15,6 +16,8 @@ export default function Home() {
         the vibrant online community where imagination flourishes. Join us in
         shaping the future, one idea at a time!
       </p>
+
+      <Feed />
     </section>
   );
 }
