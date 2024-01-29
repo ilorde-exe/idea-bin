@@ -8,6 +8,7 @@ export default function Home() {
             <span class="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-pink-400">
               Discover <span className="text-black">and</span> Share
             </span>
+            <span> </span>
             your Ideas.
           </h1>
           <p class="font-inter text-l lg:text-xl text-black font-semibold">
@@ -21,7 +22,6 @@ export default function Home() {
         </div>
         <Feed />
       </section>
-      
     </div>
   );
 }
