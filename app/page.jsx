@@ -11,7 +11,7 @@ export default function Home() {
             <span> </span>
             your Ideas.
           </h1>
-          <p class="font-inter text-l lg:text-xl text-black font-semibold">
+          <p class="p-6 font-inter text-l lg:text-xl text-black font-semibold">
             Your Gateway to Creativity Unleashed! Explore a boundless collection
             of ingenious concepts and inventions, or ignite the spark of
             inspiration by contributing your own groundbreaking ideas. Whether
