@@ -12,9 +12,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="shortcut icon" href="/public/bulb.svg" type="image/x-icon" />
-      </head>
       <body className="">
         <div className="">
           <div className="background">
@@ -31,8 +28,9 @@ export default function RootLayout({ children }) {
               }}
             />
             <main className="app">
-              <Nav/>
-              {children}</main>
+              <Nav />
+              {children}
+            </main>
           </div>
         </div>
       </body>
