@@ -7,6 +7,15 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth";
 const Nav = () => {
   const isUserLoggedIn = true;
+  const [providers, setProviders] = useState(null);
+  useEffect(() => {
+    const setProviders = async () => {
+      const response = await getProviders();
+      setProviders(response);
+    };
+    setProviders();
+  }, []);
+
   return (
     <nav className="flex justify-between w-full mb-4 pt-3 h-15 shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
       <Link href="/" className="flex flex-center px-4">
@@ -21,7 +30,7 @@ const Nav = () => {
           IdeaBin
         </p>
       </Link>
-      {/*Mobile Navigation */}
+      {/*Desktop Navigation */}
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex px-2 gap-3 md:gap-5">
@@ -32,12 +41,63 @@ const Nav = () => {
                 </span>
               </button>
             </Link>
-            <button className="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-2 border-gray-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">
+            <button className="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">
               Sign Out
             </button>
+            <Link href="/profile">
+              <Image
+                src={bulb}
+                height={37}
+                width={37}
+                className="rounded-full"
+                alt="profile-picture"
+              ></Image>
+            </Link>
           </div>
         ) : (
-          <></>
+          <>
+            {providers &&
+              Object.values(providers).map((provider) => (
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => signIn(provider.id)}
+                  className="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                >
+                  Sign In
+                </button>
+              ))}
+          </>
+        )}
+      </div>
+
+      {/*Mobile Navigation */}
+      <div className="sm:hidden flex relative">
+        {isUserLoggedIn ? (
+          <div className="flex">
+            <Image
+              src={bulb}
+              height={37}
+              width={37}
+              className="rounded-full"
+              alt="profile-picture"
+              onClick={() => {}}
+            />
+          </div>
+        ) : (
+          <>
+            {providers &&
+              Object.values(providers).map((provider) => (
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => signIn(provider.id)}
+                  className="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                >
+                  Sign In
+                </button>
+              ))}
+          </>
         )}
       </div>
     </nav>
