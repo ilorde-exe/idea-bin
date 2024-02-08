@@ -1,5 +1,5 @@
 import "@styles/globals.css";
-import blueYellow from "@public/blueyellow.jpg";
+import Background from "@components/Background";
 import Image from "next/image";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
@@ -14,19 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="">
         <div className="">
-          <div className="background">
-            <Image
-              src={blueYellow}
-              alt="Blue and Yellow Background"
-              placeholder="blur"
-              quality={100}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover",
-                zIndex: -1,
-              }}
-            />
+          <div className="">
+            <Background />
             <main className="app">
               <Nav />
               {children}

@@ -44,7 +44,7 @@ const Nav = () => {
             <button className="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">
               Sign Out
             </button>
-            <Link href="/profile">
+            <Link href="/profile" className="px-2">
               <Image
                 src={bulb}
                 height={37}
@@ -74,7 +74,7 @@ const Nav = () => {
       {/*Mobile Navigation */}
       <div className="sm:hidden flex relative">
         {isUserLoggedIn ? (
-          <div className="flex">
+          <div className="flex px-2">
             <Image
               src={bulb}
               height={37}
