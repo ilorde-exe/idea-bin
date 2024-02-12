@@ -15,6 +15,7 @@ const Nav = () => {
     };
     setProviders();
   }, []);
+  const [toggleDropdown, setToggleDropdown] = useState(false);
 
   return (
     <nav className="flex justify-between w-full mb-4 pt-3 h-15 shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
@@ -74,15 +75,57 @@ const Nav = () => {
       {/*Mobile Navigation */}
       <div className="sm:hidden flex relative">
         {isUserLoggedIn ? (
-          <div className="flex px-2">
+          <div className="flex px-2 p-2">
             <Image
               src={bulb}
               height={37}
               width={37}
               className="rounded-full"
               alt="profile-picture"
-              onClick={() => {}}
+              onClick={() => setToggleDropdown((prev) => !prev)}
             />
+            {toggleDropdown && (
+              <div
+                id="dropdownDivider"
+                className="absolute right-0 top-full z-10 bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-2 divide-y divide-gray-100 rounded-b-lg shadow w-36"
+              >
+                <ul
+                  class="py-1 text-m text-gray-800 font-semibold"
+                  aria-labelledby="dropdownDividerButton"
+                >
+                  <li>
+                    <Link
+                      href="/profile"
+                      className="block px-4 py-1 hover:bg-gray-100"
+                      onClick={() => setToggleDropdown(false)}
+                    >
+                      My Profile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/create-post"
+                      className="block px-4 py-1 hover:bg-gray-100"
+                      onClick={() => setToggleDropdown(false)}
+                    >
+                      Create Post
+                    </Link>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setToggleDropdown(false);
+                        signOut();
+                      }}
+                      className="block px-4 py-1 hover:bg-gray-100"
+                    >
+                      Sign Out
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         ) : (
           <>
