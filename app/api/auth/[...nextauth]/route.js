@@ -9,5 +9,8 @@ const handler = NextAuth({
     }),
   ],
   async session({ session }) {},
-  async signIn({ profile }) {},
+  async signIn({ profile }) {
+    try {
+    } catch (error) {}
+  },
 });
