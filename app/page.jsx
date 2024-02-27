@@ -1,7 +1,12 @@
+import CardList from "@components/CardList";
+import CategoryList from "@components/CategoryList";
+import Featured from "@components/Featured";
+import Menu from "@components/Menu";
+
 export default function Home() {
   return (
     <div>
-      <section className="py-10 px-20 w-full flex-center flex-col ">
+      <section className="lg:px-24 lg:py-10 px-4 px-4 w-full flex-center flex-col ">
         <div className="py-10 px-12  rounded-2xl shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-none sm:backdrop-blur-sm bg-opacity-20 ">
           <h1 className="mb-4 text-5xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-pink-400">
@@ -18,6 +23,14 @@ export default function Home() {
             genius, Idea-bin is the vibrant online community where imagination
             flourishes. Join us in shaping the future, one idea at a time!
           </p>
+        </div>
+        <div className="">
+          <Featured />
+          <CategoryList />
+          <div>
+            <CardList />
+            <Menu />
+          </div>
         </div>
       </section>
     </div>

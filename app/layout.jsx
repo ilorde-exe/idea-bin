@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Background from "@components/Background";
 import Nav from "@components/Nav";
+import Footer from "@components/Footer";
 
 export const metadata = {
   title: "IdeaBin",
@@ -10,13 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">
+      <body className=" max-w-10xl">
         <div className="">
           <div className="">
             <Background />
             <main className="app">
               <Nav />
               {children}
+              <Footer />
             </main>
           </div>
         </div>
