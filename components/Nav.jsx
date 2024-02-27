@@ -4,17 +4,9 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { signIn, signOut, useSession, getProviders } from "next-auth";
 const Nav = () => {
   const isUserLoggedIn = true;
-  const [providers, setProviders] = useState(null);
-  useEffect(() => {
-    (async () => {
-      const response = await getProviders();
-      console.log(response);
-      setProviders(response);
-    })();
-  }, []);
+
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   return (

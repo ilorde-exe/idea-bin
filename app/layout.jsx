@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import Background from "@components/Background";
 import Nav from "@components/Nav";
-import Provider from "@components/Provider";
 
 export const metadata = {
   title: "IdeaBin",
@@ -12,18 +11,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <Provider>
+        <div className="">
           <div className="">
-            <div className="">
-              <Background />
-              <main className="app">
-                <Nav />
-                {children}
-              </main>
-            </div>
+            <Background />
+            <main className="app">
+              <Nav />
+              {children}
+            </main>
           </div>
-          <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-        </Provider>
+        </div>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );

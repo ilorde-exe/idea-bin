@@ -1,4 +1,3 @@
-import Feed from "@components/Feed";
 export default function Home() {
   return (
     <div>
@@ -20,7 +19,6 @@ export default function Home() {
             flourishes. Join us in shaping the future, one idea at a time!
           </p>
         </div>
-        <Feed />
       </section>
     </div>
   );
