@@ -25,7 +25,7 @@ const Nav = () => {
           IdeaBin
         </p>
       </Link>
-      <div className="hidden lg:flex lg:px-3 lg:py-1.5 lg:gap-3 lg:text-lg lg:text-white ">
+      <div className="hidden lg:flex lg:items-center lg:-mt-2 lg:px-3 lg:py-1.5 lg:gap-3 lg:text-lg lg:text-white ">
         <ThemeToggle />
         <Link href="/">Homepage</Link>
         <Link href="/">Contact</Link>
@@ -98,12 +98,7 @@ const Nav = () => {
                 </Link>
 
                 <div className="py-6">
-                  <Link
-                    href="/"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 text-white hover:bg-gray-400 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-2xl hover:bg-opacity-5"
-                  >
-                    <AuthLinks />
-                  </Link>
+                  <AuthLinks />
                 </div>
               </div>
             </div>
