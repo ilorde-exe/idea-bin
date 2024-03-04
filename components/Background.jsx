@@ -5,14 +5,14 @@ import blueYellow from "@public/blueyellow.jpg";
 import bluePink from "@public/bluepink.jpg";
 import blue from "@public/blue.jpg";
 import blueOrange from "@public/blueorange.jpg";
-import fireRed from "@public/firered.jpg";
 
-const Background = () => {
+const Background = ({ count }) => {
   const backgrounds = [bluePink, blueYellow, blue, blueOrange];
   return (
     <div className=" -z-10 fixed w-screen h-screen">
+      {"Create a smoother transition for the background images"}
       <Image
-        src={backgrounds[3]}
+        src={backgrounds[count]}
         alt="Blue and Yellow Background"
         placeholder="blur"
         quality={100}

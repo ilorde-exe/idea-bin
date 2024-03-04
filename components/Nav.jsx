@@ -5,16 +5,21 @@ import Image from "next/image";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
-import ThemeToggle from "./ThemeToggle";
 import AuthLinks from "./AuthLinks";
 import Background from "./Background";
+import { PaintBucketIcon } from "lucide-react";
 
 const Nav = () => {
   const [mobileMenuOpen, setmobileMenuOpen] = useState(false);
-
+  const [count, setcount] = useState(0);
+  function changeBackground() {
+    if (count == 3) setcount(0);
+    else setcount(count + 1);
+    console.log("Background number=", count);
+  }
   return (
     <div>
-      <Background />
+      <Background count={count} />
       <nav className="flex justify-between w-full mb-4 pt-3 h-16 shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
         <Link href="/" className="flex flex-center px-4">
           <Image
@@ -29,7 +34,11 @@ const Nav = () => {
           </p>
         </Link>
         <div className="hidden lg:flex lg:items-center lg:-mt-2 lg:px-3 lg:py-1.5 lg:gap-3 lg:text-lg lg:text-white ">
-          <ThemeToggle />
+          <div className="mt-2">
+            <button type="button" onClick={changeBackground}>
+              <PaintBucketIcon />
+            </button>
+          </div>
           <Link href="/">Homepage</Link>
           <Link href="/">Contact</Link>
           <Link href="/">About</Link>
@@ -39,7 +48,11 @@ const Nav = () => {
           <div className="flex lg:hidden">
             <div className="m-2.5 -mt-1 inline-flex items-center justify-center rounded-xl p-2.5 text-white shadow-xl ring-1 ring-gray-900/5">
               <span className="sr-only">Change theme of the site</span>
-              <ThemeToggle />
+              <div className="mt-2">
+                <button type="button" onClick={changeBackground}>
+                  <PaintBucketIcon />
+                </button>
+              </div>
             </div>
           </div>
 
