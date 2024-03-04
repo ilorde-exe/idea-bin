@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import Background from "@components/Background";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
 
@@ -14,7 +13,6 @@ export default function RootLayout({ children }) {
       <body className=" max-w-10xl">
         <div className="">
           <div className="">
-            <Background />
             <main className="app">
               <Nav />
               {children}
