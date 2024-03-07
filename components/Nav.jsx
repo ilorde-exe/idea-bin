@@ -12,6 +12,13 @@ import { PaintBucketIcon } from "lucide-react";
 const Nav = () => {
   const [mobileMenuOpen, setmobileMenuOpen] = useState(false);
   const [count, setcount] = useState(0);
+  function setLocalstorage(index) {
+    if (localStorage.getItem("bgNumber") === undefined) {
+      localStorage.setItem("bgNumber", index);
+    } else {
+      localStorage.setItem("bgNumber", index);
+    }
+  }
   function changeBackground() {
     if (count == 3) setcount(0);
     else setcount(count + 1);
