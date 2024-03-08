@@ -10,9 +10,9 @@ const Featured = () => {
       </h1>
       <div className=" flex flex-col lg:flex-row">
         <div className="">
-          <Image src={culture} className="" />
+          <Image src={culture} className="rounded-xl" />
         </div>
-        <div className="p-2 lg:p-8 ">
+        <div className="lg:p-8 ">
           <h2 className="py-4 text-xl">
             Discover the Serenity: Scenic Vacation Places Around the World
           </h2>

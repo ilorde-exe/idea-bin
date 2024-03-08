@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <section className="lg:px-24 lg:py-10 px-4 px-4 w-full flex-center flex-col ">
-        <div className="py-10 px-12 rounded-2xl shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-none sm:backdrop-blur-m bg-opacity-20 ">
+        <div className="py-10 px-12 rounded-2xl shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-none lg:backdrop-blur-sm  bg-opacity-20 ">
           <div className="mb-8">
             <h1 className="mb-4 text-5xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-pink-400">
@@ -29,9 +29,12 @@ export default function Home() {
 
           <Featured />
         </div>
-        <div className="">
-          <CategoryList />
-          <div>
+        <div className="py-6">
+          <div className="py-10 px-12 rounded-2xl shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-none lg:backdrop-blur-sm  bg-opacity-20 ">
+            <CategoryList />
+          </div>
+
+          <div className="">
             <CardList />
             <Menu />
           </div>
