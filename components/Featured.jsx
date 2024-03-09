@@ -13,7 +13,7 @@ const Featured = () => {
           <Image src={culture} className="rounded-xl" />
         </div>
         <div className="lg:p-8 ">
-          <h2 className="py-4 text-xl">
+          <h2 className="py-4 font-semibold text-xl">
             Discover the Serenity: Scenic Vacation Places Around the World
           </h2>
           <p>
@@ -37,7 +37,7 @@ const Featured = () => {
             beaches as you soak in the Mediterranean sun.
           </p>
           <div className="mt-4"></div>
-          <button class="bg-white hover:bg-blue-400 text-black font-bold py-2 px-4 border-b-4 border-gray-500 hover:border-gray-950 hover:bg-gray-500 hover:text-white rounded transition duration-500 ease-in-out ">
+          <button class="w-32 bg-white hover:bg-blue-400 text-black font-bold py-2 px-4 border-b-4 border-gray-500 hover:border-gray-950 hover:bg-gray-500 hover:text-white rounded transition duration-500 ease-in-out ">
             Read More
           </button>
         </div>
