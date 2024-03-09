@@ -16,7 +16,7 @@ const CategoryList = () => {
     <>
       <h1 className={s.title}>Popular Categories</h1>
       <div className={s.container}>
-        <Link href="/blog?cat=coding" className={`${s.category} bg-[#a6e39a]`}>
+        <Link href="/blog?cat=coding" className={`${s.category} bg-[#a1df95]`}>
           Coding
         </Link>
         <Link
@@ -25,13 +25,13 @@ const CategoryList = () => {
         >
           Fashion
         </Link>
-        <Link href="/blog?cat=food" className={`${s.category} bg-cyan-200`}>
+        <Link href="/blog?cat=food" className={`${s.category} bg-[#7edced]`}>
           Food
         </Link>
-        <Link href="/blog?cat=travel" className={`${s.category} bg-indigo-200`}>
+        <Link href="/blog?cat=travel" className={`${s.category} bg-[#9284f0]`}>
           Travel
         </Link>
-        <Link href="/blog?cat=culture" className={`${s.category} bg-pink-200`}>
+        <Link href="/blog?cat=culture" className={`${s.category} bg-[#dca4de]`}>
           Culture
         </Link>
       </div>

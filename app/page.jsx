@@ -33,11 +33,10 @@ export default function Home() {
           <div className="py-10 px-12 rounded-2xl shadow-inner shadow-xl bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-none lg:backdrop-blur-sm  bg-opacity-20 ">
             <CategoryList />
           </div>
-
-          <div className="">
-            <CardList />
-            <Menu />
-          </div>
+        </div>
+        <div className="">
+          <CardList />
+          <Menu />
         </div>
       </section>
     </div>
