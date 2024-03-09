@@ -30,7 +30,7 @@ function Card() {
         <div></div>
         <Link
           href="/"
-          className="flex justify-center w-32 bg-white hover:bg-blue-400 text-black font-bold py-2 px-4 border-b-4 border-gray-500 hover:border-gray-950 hover:bg-gray-500 hover:text-white rounded transition duration-500 ease-in-out"
+          className="flex justify-center w-32 bg-white text-black font-bold py-2 px-4 border-b-4 border-gray-500 hover:border-gray-950 hover:bg-gray-500 hover:text-white rounded transition duration-500 ease-in-out"
         >
           Read More
         </Link>
