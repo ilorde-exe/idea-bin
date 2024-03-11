@@ -36,7 +36,6 @@ export default function Home() {
         </div>
         <div className="">
           <CardList />
-          <Menu />
         </div>
       </section>
     </div>
