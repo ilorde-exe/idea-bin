@@ -20,11 +20,11 @@ const Write = () => {
         height={16}
       />
       <div className="px-4 flex gap-2">
-        <button type="button" onClick={() => setOpen(!open)}>
+        <div onClick={() => setOpen(!open)} className="pr-4 ring-0">
           <PlusCircle />
-        </button>
+        </div>
         {open && (
-          <div>
+          <div className="flex gap-2">
             <button type="button">
               <ImageUp />
             </button>
