@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import "@app/globals.css";
 import { PlusCircle } from "lucide-react";
 import { ImageUp, FileVideo2Icon, ExternalLink } from "lucide-react";
 import { useState } from "react";
@@ -13,12 +14,16 @@ const Write = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <input
-        type="text"
-        placeholder="Title"
-        className="-mt-4 text-3xl border-0 text-gray-950 bg-transparent font-semibold"
-        height={20}
-      />
+      <div className="bg-gray-0">
+        <input
+          id="title"
+          type="text"
+          placeholder="Title"
+          className="-mt-4 w-full text-3xl border-0 text-gray-950 font-semibold"
+          height={20}
+        />
+      </div>
+
       <div className="px-4 flex gap-2">
         <div onClick={() => setOpen(!open)} className="pr-4 ring-0">
           <PlusCircle />
@@ -37,13 +42,12 @@ const Write = () => {
           </div>
         )}
       </div>
-
       <ReactQuill
         theme="snow"
         value={value}
         onChange={setValue}
         placeholder="Let your ideas flow!"
-        className="mb-32 text-black h-96 w-full text-md"
+        className="mb-32 text-black h-96 w-full font-medium text-[20px]"
       />
     </div>
   );
