@@ -61,7 +61,7 @@ const Footer = () => {
                     <li>
                       <Link
                         class="text-blueGray-800 hover:text-blueGray-600 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation?ref=njs-profile"
+                        href="/about"
                       >
                         About
                       </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
                     <li>
                       <Link
                         class="text-blueGray-800 hover:text-blueGray-600 font-semibold block pb-2 text-sm"
-                        href="https://blog.creative-tim.com?ref=njs-profile"
+                        href="contact"
                       >
                         Contact
                       </Link>
@@ -100,7 +100,7 @@ const Footer = () => {
                     <li>
                       <Link
                         class="text-blueGray-800 hover:text-blueGray-600 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/terms?ref=njs-profile"
+                        href="/"
                       >
                         Terms &amp; Conditions
                       </Link>
@@ -108,7 +108,7 @@ const Footer = () => {
                     <li>
                       <Link
                         class="text-blueGray-800 hover:text-blueGray-6s00 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/privacy?ref=njs-profile"
+                        href="/"
                       >
                         Privacy Policy
                       </Link>

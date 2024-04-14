@@ -112,18 +112,21 @@ const Nav = () => {
                   <Link
                     href="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 text-white hover:bg-gray-400 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-2xl hover:bg-opacity-5"
+                    onClick={() => setmobileMenuOpen(false)}
                   >
                     Homepage
                   </Link>
                   <Link
                     href="/contact"
                     className="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 text-white hover:bg-gray-400 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-2xl hover:bg-opacity-5"
+                    onClick={() => setmobileMenuOpen(false)}
                   >
                     Contact
                   </Link>
                   <Link
                     href="/about"
                     className="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 text-white hover:bg-gray-400 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-2xl hover:bg-opacity-5"
+                    onClick={() => setmobileMenuOpen(false)}
                   >
                     About
                   </Link>
