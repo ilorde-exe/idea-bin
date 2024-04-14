@@ -23,7 +23,19 @@ const Write = () => {
         <button type="button" onClick={() => setOpen(!open)}>
           <PlusCircle />
         </button>
-        {open && <div></div>}
+        {open && (
+          <div>
+            <button type="button">
+              <ImageUp />
+            </button>
+            <button type="button">
+              <ExternalLink />
+            </button>
+            <button type="button">
+              <FileVideo2Icon />
+            </button>
+          </div>
+        )}
       </div>
       <ReactQuill
         theme="snow"
