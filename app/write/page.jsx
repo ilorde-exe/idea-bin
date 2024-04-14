@@ -3,7 +3,8 @@ import React from "react";
 import { PlusCircle } from "lucide-react";
 import { ImageUp, FileVideo2Icon, ExternalLink } from "lucide-react";
 import { useState } from "react";
-import ReactQuill from "react-quill";
+const ReactQuill =
+  typeof window === "object" ? require("react-quill") : () => false;
 import "react-quill/dist/quill.snow.css";
 
 const Write = () => {
@@ -15,9 +16,8 @@ const Write = () => {
       <input
         type="text"
         placeholder="Title"
-        className=""
-        width={16}
-        height={16}
+        className="-mt-4 text-3xl border-0 text-gray-950 bg-transparent font-semibold"
+        height={20}
       />
       <div className="px-4 flex gap-2">
         <div onClick={() => setOpen(!open)} className="pr-4 ring-0">
@@ -37,12 +37,13 @@ const Write = () => {
           </div>
         )}
       </div>
+
       <ReactQuill
         theme="snow"
         value={value}
         onChange={setValue}
         placeholder="Let your ideas flow!"
-        className="text-black h-96 w-full"
+        className="mb-32 text-black h-96 w-full text-md"
       />
     </div>
   );
