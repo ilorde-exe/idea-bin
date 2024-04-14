@@ -8,7 +8,7 @@ const s = {
   container: "flex flex-col lg:flex-row flex-wrap gap-1 justify-between",
   title: "mb-6 text-3xl font-extrabold text-gray-900 ",
   category:
-    "bg-white font-mono p-4 rounded-xl flex basis-1/6  align-center justify-center",
+    "font-mono p-4 rounded-xl flex basis-1/6  align-center justify-center",
 };
 
 const CategoryList = () => {

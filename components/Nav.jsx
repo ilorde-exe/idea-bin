@@ -47,8 +47,8 @@ const Nav = () => {
             </button>
           </div>
           <Link href="/">Homepage</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/about">About</Link>
           <AuthLinks />
         </div>
         <div className="lg:hidden flex">
@@ -116,13 +116,13 @@ const Nav = () => {
                     Homepage
                   </Link>
                   <Link
-                    href="/"
+                    href="/contact"
                     className="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 text-white hover:bg-gray-400 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-2xl hover:bg-opacity-5"
                   >
                     Contact
                   </Link>
                   <Link
-                    href="/"
+                    href="/about"
                     className="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 text-white hover:bg-gray-400 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-2xl hover:bg-opacity-5"
                   >
                     About
